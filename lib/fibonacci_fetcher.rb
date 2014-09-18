@@ -1,9 +1,14 @@
 class FibonacciFetcher
   def fetch(number)
-    if number == 1 || number == 0
-      1
-    else
-      fetch(number - 1) + fetch(number -2)
+    return number if number < 2
+    count = 2
+
+    while count < number
+      value3 = count - 1 + count - 2
+      fibo = value3 - 1 + value3 - 2
+      count += 1
     end
+
+    fibo
   end
 end
